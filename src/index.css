@@ -1,0 +1,17 @@
+:root { 
+
+  --screen-width: 400px;
+  --screen-height: 600px;
+}
+body {
+  margin:0;
+  min-width: var(--screen-width);
+  min-height: var(--screen-height);
+  max-height: var(--screen-height);
+  max-width: var(--screen-width);
+  background: #1E2124;
+  /* overflow-y: scroll; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
