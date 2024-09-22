@@ -7,6 +7,12 @@
         "scripting",
         "storage"
     ],
+    "content_scripts": [
+        {
+          "matches": ["https://*/*","http://*/*" ],
+          "js": ["content-script.js"]
+        }
+      ],
     "action": {
         "default_popup": "index.html"
     }
