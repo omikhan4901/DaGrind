@@ -34,6 +34,11 @@ const handleClick = async (arr, setArr, value, setValue) => {
     if(!valExists){
         setArr([...arr, [value, false]]);
         setValue(" ")
+       await chrome.storage.sync.set({ dagrind_list: [...arr, [value, false]] }).then(() => {
+            console.log("New Array is set!");
+          });
+
+       
     }
   };
   

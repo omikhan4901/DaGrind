@@ -30,10 +30,19 @@ function App() {
           })}
         </div>
         <InputContainer sites={sites} setSites={setSites} />
+        <button onClick={handleCC}>Click me!</button>
       </ThemeProvider>
     </div>
   );
 }
+
+const handleCC = () => { 
+  chrome.storage.sync.get(["dagrind_list"]).then((result) => {
+    console.log(result.dagrind_list);
+  });
+}
+
+
 
 const theme = createTheme({
   palette: {
