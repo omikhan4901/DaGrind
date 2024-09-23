@@ -24,7 +24,7 @@
 
 ## Things left:
 
-- [ ] **Code Refactor**: Move reusable code to the `utils` folder for better organization.
+- [x] **Code Refactor**: Move reusable code to the `utils` folder for better organization.
 - [ ] **UI Enhancements**: Improve the visual styling and design.
 
 ## Possible Future Updates: 

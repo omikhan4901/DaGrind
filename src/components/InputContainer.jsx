@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import TextField from "@mui/material/TextField";
 import AddIcon from "@mui/icons-material/Add";
+import { handleClick} from "../utils/InputContainerUtils";
 
 function InputContainer({ sites, setSites }) {
   const [value, setValue] = useState("");
@@ -26,28 +27,5 @@ function InputContainer({ sites, setSites }) {
     </div>
   );
 }
-
-
-const handleClick = async (arr, setArr, value, setValue) => {
-    if (!isValueOkay(value)) return;
-    const valExists = arr.find(a => a[0].toLowerCase() === value.trim().toLowerCase())
-    if(!valExists){
-        setArr([...arr, [value, false]]);
-        setValue(" ")
-       await chrome.storage.sync.set({ dagrind_list: [...arr, [value, false]] }).then(() => {
-            console.log("New Array is set!");
-          });
-
-       
-    }
-  };
-  
-  const isValueOkay = (value) => {
-    if(value.trim().split(' ').length > 1) return
-    const pattern = /<[^>]+>|[&<>"']/g;
-    return value.trim() !== "" && !pattern.test(value);
-  };
-
-
 
 export default InputContainer;

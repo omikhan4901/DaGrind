@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 import MySwitch from "./mySwitch";
+import {siteChanged, deleteSite} from "../utils/siteUtils.js"
 
 function Site({ name, sites, setSites, isDisabled, isOn }) {
   const [checked, setChecked] = useState(false);
@@ -31,22 +32,5 @@ function Site({ name, sites, setSites, isDisabled, isOn }) {
     </div>
   );
 }
-
-const siteChanged = async (name, arr,  checked, setChecked, setArr)=> {
-  const arrIdx = arr.findIndex(e => e[0].toLowerCase() === name.toLowerCase())
-  console.log(arrIdx)
-  arr[arrIdx] = [arr[arrIdx][0], !checked]
-  setArr(arr)
-  setChecked(!checked)
-  await chrome.storage.sync.set({ dagrind_list: arr })
-
-}
-
-const deleteSite = async (name, arr, setArr) => {
-  const newArr = arr.filter((e) => e[0].toLowerCase() !== name.toLowerCase());
-  setArr(newArr);
-
-  await chrome.storage.sync.set({ dagrind_list: newArr })
-};
 
 export default Site;
