@@ -9,6 +9,10 @@
 - **Simple UI**: A clean and intuitive interface to help you focus on your work.
 - **Lightweight**: Runs efficiently in the background without slowing down your browsing experience.
 
+## Demo 
+![Demo](./src/assets/demo.gif)
+
+
 ## Installation
 
 1. Visit the [Chrome Web Store](#) (link coming soon).
