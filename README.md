@@ -1,4 +1,4 @@
-![DaGrind Logo](.assets/Banner.gif)
+![DaGrind Logo](./src/assets/Banner.gif)
 
 **DaGrind** is a productivity Chrome extension designed to help you stay focused by blocking distractions from social media and other websites. Users can choose from a set of pre-listed distracting websites (e.g., YouTube, Instagram, Facebook) or add their own custom sites to block. With **DaGrind**, you can stay on track and grind out your work without losing focus.
 
