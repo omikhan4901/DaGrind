@@ -17,10 +17,10 @@
 
 ## Usage
 
-1. Open the extension from the toolbar.
-2. Select websites to block from the pre-listed options or add new ones by entering their URL.
-3. Save your settings to begin blocking distractions.
-4. To regain access, simply disable the blocking for specific sites or turn off the extension.
+1. Clone the repo.
+2. Go to `chrome://extensions/` on chrome.
+3. On the upper left area, click `load unpacked`.
+4. Set the path to the dist folder in the repo.
 
 ## Things left:
 
