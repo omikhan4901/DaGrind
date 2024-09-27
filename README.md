@@ -24,8 +24,7 @@
 
 ## Things left:
 
-- [x] **Code Refactor**: Move reusable code to the `utils` folder for better organization.
-- [ ] **UI Enhancements**: Improve the visual styling and design.
+- [x] **Version 1.0 Publish**: Publishing version 1.0 on the chrome web store.
 
 ## Possible Future Updates: 
 
@@ -34,9 +33,5 @@
 ## Feedback & Support
 
 Have any suggestions, issues, or feedback? Feel free to reach out by opening an issue or contacting me at [mehboobehsankhan2@gmail.com].
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Always open to contributions!!
