@@ -21,7 +21,7 @@
 
 ## Usage
 
-1. Clone the repo.
+1. fork -> clone the repo to your machine.
 2. Go to `chrome://extensions/` on chrome.
 3. On the upper left area, click `load unpacked`.
 4. Set the path to the dist folder in the repo.
