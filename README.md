@@ -24,8 +24,11 @@
 
 ## Things left:
 
-- [ ] **Code Refactor**: Move reusable code to the `utils` folder for better organization.
+- [x] **Code Refactor**: Move reusable code to the `utils` folder for better organization.
 - [ ] **UI Enhancements**: Improve the visual styling and design.
+
+## Possible Future Updates: 
+
 - [ ] **Focus Timer**: Introduce a focus timer to manage work intervals (e.g., Pomodoro technique).
 
 ## Feedback & Support
@@ -35,3 +38,5 @@ Have any suggestions, issues, or feedback? Feel free to reach out by opening an 
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+## Always open to contributions!!

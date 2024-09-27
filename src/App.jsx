@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 import Site from "./components/site";
@@ -8,10 +8,11 @@ import MySwitch from "./components/mySwitch";
 import banner from './assets/Banner.gif'
 
 
+import { handleEnable } from "./utils/AppUtils";
+
 function App() {
   const [sites, setSites] = useState([]);
   const [isDisabled, setIsDisabled] = useState(false);
-
   useEffect(async () => {
     const enable = await chrome.storage.sync.get(["dagrind_enable"]);
     if (enable.dagrind_enable) {
@@ -21,18 +22,11 @@ function App() {
       setIsDisabled(false);
     }
     const list = await chrome.storage.sync.get(["dagrind_list"]);
-    console.log(list.dagrind_list.length)
     if (list.dagrind_list && list.dagrind_list.length > 0) {
       setSites(list.dagrind_list);
     } else {
-      const arr = [
-        ["Facebook", false],
-        ["X(Twitter)", false],
-        ["Instagram", false],
-        ["Reddit", false],
-      ];
-      await chrome.storage.sync.set({ dagrind_list: arr });
-      setSites(arr);
+      await chrome.storage.sync.set({ dagrind_list: []});
+      setSites([]);
     }
   }, []);
 
@@ -41,13 +35,13 @@ function App() {
       <ThemeProvider theme={theme}>
         <img className="banner" src={banner} alt="Loading banner... " />
         <span className="enableSpan">(Enable)</span>
-        <MySwitch
+          <MySwitch
           disableRipple
           checked={isDisabled}
           onChange={() => handleEnable(isDisabled, setIsDisabled)}
         />
         <div className="siteContainer">
-          {sites.map((site) => {
+          { sites.length > 0? sites.map((site) => {
             return (
               <Site
                 key={site[0]}
@@ -57,21 +51,18 @@ function App() {
                 isOn = {site[1]}
                 setSites={setSites}
               />
-            );
-          })}
+            )
+          })
+          : <span className="enableSpan">Add some sites to get started</span>
+        }
         </div>
         <InputContainer sites={sites} setSites={setSites} />
+        <span className="enableSpan" style={{marginTop: "16px"}}>Always with domain extensions<br></br>(.com/.org/.io)</span>
       </ThemeProvider>
     </div>
   );
 }
 
-const handleEnable = async (isDisabled, setIsDisabled) => {
-  await chrome.storage.sync.set({ dagrind_enable: !isDisabled }).then(() => {
-    console.log("Set to: " + !isDisabled);
-    setIsDisabled(!isDisabled);
-  });
-};
 const theme = createTheme({
   palette: {
     ochre: {
