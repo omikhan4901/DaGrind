@@ -28,7 +28,7 @@
 
 ## Things left:
 
-- [x] **Version 1.0 Publish**: Publishing version 1.0 on the chrome web store.
+- [ ] **Version 1.0 Publish**: Publishing version 1.0 on the chrome web store.
 
 ## Possible Future Updates: 
 
