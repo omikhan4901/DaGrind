@@ -5,6 +5,8 @@ import Site from "./components/site";
 import InputContainer from "./components/InputContainer";
 import "./App.css";
 import MySwitch from "./components/mySwitch";
+import banner from './assets/Banner.gif'
+
 
 function App() {
   const [sites, setSites] = useState([]);
@@ -37,7 +39,7 @@ function App() {
   return (
     <div id="container">
       <ThemeProvider theme={theme}>
-        <h1 className="title">DaGrind</h1>
+        <img className="banner" src={banner} alt="Loading banner... " />
         <span className="enableSpan">(Enable)</span>
         <MySwitch
           disableRipple

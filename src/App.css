@@ -1,6 +1,4 @@
-
-
-#container { 
+#container {
   /* margin:  0 15px 30px 15px; */
   display: flex;
   flex-direction: column;
@@ -10,13 +8,16 @@
   max-height: var(--screen-height);
 }
 
-.title { 
+.banner {
+  width: var(--screen-width);
+}
+
+.title {
   color: #3d4870;
-  font-family:"Inter";
+  font-family: "Inter";
   font-weight: 900;
   font-size: 3em;
 }
-
 
 .siteContainer {
   width: var(--screen-width);
@@ -25,21 +26,20 @@
   max-height: 200px;
 }
 
-
-.site { 
+.site {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   margin: 0 30px;
   padding: 0 20px;
-  border-bottom: #36393E 1px solid ;
+  border-bottom: #36393e 1px solid;
 }
 
-.siteTitle { 
+.siteTitle {
   margin-left: 16px;
-  color: #4D5B8D;
-  font-family:"Inter";
+  color: #4d5b8d;
+  font-family: "Inter";
   font-weight: 900;
   font-size: 2em;
   max-width: 150px;
@@ -53,34 +53,33 @@
   margin-top: 15px;
 }
 
-.enableSpan { 
-  color: #4D5B8D;
+.enableSpan {
+  margin-top: 30px;
+  color: #4d5b8d;
   font-size: 1.1em;
-  font-family:"Inter";
+  font-family: "Inter";
   font-weight: bold;
 }
 
+/* */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #4d5b8d;
+  border-radius: 10px;
+}
 
-  /* */
-  ::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px #4D5B8D; 
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #4D5B8D; 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #4D5B8D; 
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4d5b8d;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4d5b8d;
+}
